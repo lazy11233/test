@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <Select>
       <SelectOption></SelectOption>
     </Select>
@@ -9,7 +8,7 @@
 
 <script>
 import Select from './components/Select.vue'
-import SelectOption from './components/Select.vue'
+import SelectOption from './components/SelectOption.vue'
 
 export default {
   name: 'app',
@@ -28,5 +27,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding: 100px;
 }
 </style>

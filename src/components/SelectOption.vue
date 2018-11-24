@@ -1,5 +1,5 @@
 <template>
-  <div class="select-scoped">
+  <div class="select-option">
     
   </div>
 </template>

@@ -1,10 +1,15 @@
 <template>
 <div class="select">
   <div class="input-wrapper">
-    <input type="text" :value="value">
+    <input type="text" :value="value" 
+      @change="$emit('change', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
+    >
   </div>
   <div class="option-wrapper">
-    <slot>
+    <slot slot="option">
       
     </slot>
   </div>
@@ -15,7 +20,11 @@ export default {
   name: 'Select',
   data() {
     return {
-      value: ''
+    }
+  },
+  props: {
+    value: {
+      type: String
     }
   }
 }
