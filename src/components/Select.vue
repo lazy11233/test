@@ -45,12 +45,14 @@ $font-size: 14px;
     align-items: center;
 
     position: relative;
-    border: 1px solid red;
-    font-size: $font-size;
     width: 100%;
     min-width: 200px;
     height: 100%;
     min-height: 24px;
+    border: 1px solid red; // FIXME delete it
+    font-size: $font-size;
+    background: transparent;
+    cursor: pointer;
     .input-wrapper {
       width: 100%;
       height: 100%;
@@ -63,16 +65,22 @@ $font-size: 14px;
         border: none;
         font-size: $font-size;
         padding-right: 24px;
+        background: transparent;
+        cursor: pointer; 
         &:focus {
           outline: none;
         }
       }
       .iconfont {
+        background: transparent;
         position: absolute;
         font-size: 14px;
         right: 0;
         width: 24px;
       }
+    }
+    &:hover {
+      background-color: #20292b;
     }
   }
 </style>
