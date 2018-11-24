@@ -1,20 +1,32 @@
 <template>
   <div id="app">
-    <Select>
-      <SelectOption></SelectOption>
-    </Select>
+    <VSelect v-model="msg" style="width:200px; height: 32px;">
+      <VSelectOption></VSelectOption>
+    </VSelect>
+    <button @click="changeMSG">
+      .
+    </button>
   </div>
 </template>
-
 <script>
-import Select from './components/Select.vue'
-import SelectOption from './components/SelectOption.vue'
+import VSelect from './components/Select.vue'
+import VSelectOption from './components/SelectOption.vue'
 
 export default {
   name: 'app',
   components: {
-    Select,
-    SelectOption
+    VSelect,
+    VSelectOption
+  },
+  data() {
+    return {
+      msg: 'fadfa'
+    }
+  },
+  methods: {
+    changeMSG() {
+      this.msg += 1;
+    }
   }
 }
 </script>
